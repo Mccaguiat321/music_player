@@ -1,0 +1,67 @@
+
+
+<div class="music-disc img-fluid image">
+  <div class="disc-center">
+      <div class="inner-label"></div>
+  </div>
+  <div class="grooves"></div>
+</div>
+<!-- Container for falling notes -->
+<div class="falling-notes">
+  <div *ngFor="let note of notes" class="note" [ngStyle]="{'left': note.left, 'animation-duration': note.duration, 'animation-delay': note.delay}">
+    <div class="note note-1">&#9835;</div>
+  </div>
+</div>
+
+<div class="col-md-6 offset-md-3 float-end caguiat">
+  <div class="card">
+    <div class="dropdown mb-4 text-center">
+      <button class="btn btn-primary btn-lg dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ selectedCategory === 'rock' ? 'Rock' : 'Medly' }} Player
+      </button>
+      <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item text-center" (click)="selectCategory('rock')">Rock</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('medly')">Medly</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('pop')">Pop</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('hiphop')">Hip Hop</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('heavymetal')">Heavy Metal</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('reggae')">Reggae</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('rapping')">Rapping</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('blues')">Blues</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('jazz')">Jazz</a></li>
+        <li><a class="dropdown-item text-center" (click)="selectCategory('funk')">Funk</a></li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <!-- Rock Player Component -->
+      <app-rock *ngIf="selectedCategory === 'rock'"></app-rock>
+
+      <!-- Medly Player Component -->
+      <app-medly *ngIf="selectedCategory === 'medly'"></app-medly>
+
+      <!-- Pop Player Component -->
+      <app-pop-music *ngIf="selectedCategory === 'pop'"></app-pop-music>
+
+      <!-- Hip Hop Player Component -->
+      <app-hip-hop *ngIf="selectedCategory === 'hiphop'"></app-hip-hop>
+
+      <!-- Heavy Metal Player Component -->
+      <app-heave-metal *ngIf="selectedCategory === 'heavymetal'"></app-heave-metal>
+
+      <!-- Reggae Player Component -->
+      <app-reggae *ngIf="selectedCategory === 'reggae'"></app-reggae>
+
+      <!-- Rapping Player Component -->
+      <app-rapping *ngIf="selectedCategory === 'rapping'"></app-rapping>
+
+      <!-- Blues Player Component -->
+      <app-blues *ngIf="selectedCategory === 'blues'"></app-blues>
+
+      <!-- Jazz Player Component -->
+      <app-jazz *ngIf="selectedCategory === 'jazz'"></app-jazz>
+
+      <!-- Funk Player Component -->
+      <app-funk *ngIf="selectedCategory === 'funk'"></app-funk>
+    </div>
+  </div>
+</div>

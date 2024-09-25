@@ -1,0 +1,25 @@
+<div class="player-container">
+    <h2 class="player-header">Rapping</h2>
+    <div *ngFor="let song of songs; let i = index" class="song-item">
+      <div class="album-art">{{ song.title.charAt(0) }}</div>
+      <div class="song-info">
+        <h3>{{ song.title }}</h3>
+        <p>{{ song.artist }}</p>
+        <!-- Clickable Progress Bar -->
+        <div class="progress-bar" (click)="seekSong($event, song.url)">
+          <div class="progress-fill" [ngStyle]="{ width: getProgressBarWidth(song.url) + '%' }"></div>
+        </div>
+      </div>
+      <button (click)="playPauseSong(song.url, i)" class="play-pause-btn">
+        <span *ngIf="currentSong === song.url && !isPaused">⏸</span>
+        <span *ngIf="currentSong !== song.url || isPaused">▶️</span>
+      </button>
+    </div>
+    
+    <div class="song-timer" *ngIf="currentSong">
+      <div class="song-actions">
+        <span class="timer">{{ formatTime(currentTime) }} / {{ formatTime(getDuration()) }}</span>
+      </div>
+    </div>
+  </div>
+  

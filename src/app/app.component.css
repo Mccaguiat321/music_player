@@ -1,0 +1,209 @@
+.image {
+    display: block;
+    width: 400px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    animation: spin 3s linear infinite; /* Spin animation */
+    
+    /* Positioning the image */
+    position: absolute;
+    left: -7%; /* Center horizontally */
+    top: -10%; /* Adjust vertical position as needed */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* Container for falling notes */
+.falling-notes {
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    pointer-events: none; /* Prevent interaction with falling notes */
+  }
+  
+  /* Styling for individual notes */
+  .note {
+    position: absolute;
+    font-size: 24px; /* Size of the icon */
+    color: #000; /* Color of the icon */
+    opacity: 0.8;
+    animation: fall linear infinite;
+  }
+  
+  /* Define keyframes for falling animation */
+  @keyframes fall {
+    0% {
+      top: -200px; /* Start position above the viewport */
+    }
+    100% {
+      top: 100vh; /* End position at the bottom of the viewport */
+    }
+  }
+  /* Glass morph effect for the player container */
+.player-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for the glass effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better contrast */
+    color: #fff; /* White text color for contrast */
+
+  }
+  
+  /* Header styling */
+  .player-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for song items */
+  .song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  }
+  
+  /* Album art styling */
+  .album-art {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Circular album art */
+    background: rgba(255, 255, 255, 0.3); /* Transparent white background */
+    color: #000; /* Black text color for visibility */
+    font-size: 24px;
+    margin-right: 15px;
+  }
+  
+  /* Song info styling */
+  .song-info {
+    flex-grow: 1;
+  }
+  
+  /* Progress bar styling */
+  .progress-bar {
+    position: relative;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.4); /* Slightly transparent background */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: #0d6efd; /* Blue color for progress fill */
+    border-radius: 5px;
+    transition: width 0.2s;
+  }
+  
+  /* Play/Pause button styling */
+  .play-pause-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #0d6efd; /* Blue color for play/pause button */
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  /* Song timer styling */
+  .song-timer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    color: #fff; /* White text color for contrast */
+    
+  }
+  
+  /* Card body styling */
+  .card-body {
+    padding: 20px;
+   
+  }
+.caguiat{
+    margin-top: 50px;
+    transform: translateX(-40px);
+}
+.note {
+  font-size: 36px;
+  color: black;
+  position: absolute;
+}
+
+.note-1 {
+  top: 5px;
+  left: 50px;
+}
+
+.music-disc {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, black 70%, #333 73%, #111 90%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* Center Label */
+.disc-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: #ff4136; /* Red label */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Inner circle on the label */
+.inner-label {
+  width: 30px;
+  height: 30px;
+  background-color: #ffdc00; /* Yellow center hole */
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Grooves around the disc */
+.grooves {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  height: 310px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, transparent 0%, transparent 2%, rgba(255, 255, 255, 0.05) 3%, transparent 4%);
+  z-index: -1; /* Behind the center */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
