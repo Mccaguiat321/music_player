@@ -146,8 +146,8 @@
    
   }
 .caguiat{
-    margin-top: 50px;
-    transform: translateX(-40px);
+    transform: translateY(50px);
+    margin-right: 40px;
 }
 .note {
   font-size: 36px;
@@ -207,3 +207,12 @@
   z-index: -1; /* Behind the center */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
+
+@media only screen and (max-width: 600px) {
+  .caguiat{
+    
+    transform: translateY(50px);
+    margin-right: 20px;
+}
+}
+
