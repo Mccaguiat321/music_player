@@ -8,6 +8,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -26,6 +27,8 @@
   margin-bottom: 15px;
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 /* Album Art */
@@ -41,6 +44,7 @@
   justify-content: center;
   border-radius: 5px;
   margin-right: 15px;
+  flex-shrink: 0; /* Prevent shrinking of the album art */
 }
 
 /* Song Info */
@@ -106,4 +110,37 @@
 .timer {
   font-weight: bold;
   font-size: 16px;
+}
+
+
+@media (max-width: 480px) {
+
+  .player-container{
+    width: 260px;
+    padding: 0;
+    transform: translateX(-7px);
+  }
+
+  .player-header {
+    font-size: 15px;
+  }
+
+  .album-art {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .song-info h3 {
+    font-size: 14px;
+  }
+
+  .song-info p {
+    font-size: 11px;
+  }
+
+  .play-pause-btn {
+    font-size: 14px;
+    padding: 6px;
+  }
 }

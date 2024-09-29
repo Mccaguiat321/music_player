@@ -1,110 +1,151 @@
 /* Player container */
 .player-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Header */
+.player-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Song item */
+.song-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Album Art */
+.album-art {
+  width: 50px;
+  height: 50px;
+  background-color: #2196F3;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: 15px;
+  flex-shrink: 0; /* Prevent shrinking of the album art */
+}
+
+/* Song Info */
+.song-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.song-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.song-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #2196F3;
+  border-radius: 5px;
+  transition: width 0.2s ease;
+}
+
+/* Play/Pause Button */
+.play-pause-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.play-pause-btn:hover {
+  background-color: #1976D2;
+}
+
+/* Song Timer */
+.song-timer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.timer {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small screens */
+
+
+/* For extra small screens (e.g., phones) */
+@media (max-width: 480px) {
+
+  .player-container{
+    width: 260px;
+    padding: 0;
+    transform: translateX(-7px);
   }
-  
-  /* Header */
+
   .player-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 15px;
   }
-  
-  /* Song item */
-  .song-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Album Art */
+
   .album-art {
-    width: 50px;
-    height: 50px;
-    background-color: #2196F3;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
   }
-  
-  /* Song Info */
-  .song-info {
-    flex-grow: 1;
-    text-align: left;
-  }
-  
+
   .song-info h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
+    font-size: 14px;
   }
-  
+
   .song-info p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: #888;
+    font-size: 11px;
   }
-  
-  /* Progress bar */
-  .progress-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    background-color: #2196F3;
-    border-radius: 5px;
-    transition: width 0.2s ease;
-  }
-  
-  /* Play/Pause Button */
+
   .play-pause-btn {
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.2s ease;
-  }
-  
-  .play-pause-btn:hover {
-    background-color: #1976D2;
-  }
-  
-  /* Song Timer */
-  .song-timer {
-    margin-top: 15px;
     font-size: 14px;
-    color: #555;
+    padding: 6px;
   }
-  
-  .timer {
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
+}

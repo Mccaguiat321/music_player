@@ -127,13 +127,13 @@
   }
 
   .player-header {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .album-art {
     width: 40px;
     height: 40px;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .song-info h3 {
