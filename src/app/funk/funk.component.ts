@@ -9,7 +9,7 @@ export class FunkComponent {
   songs = [
     { title: 'Superstition', artist: 'Stevie Wonder', url: 'assets/Stevie_Wonder_Superstition(256k).mp3', duration: 0 },
     { title: 'Give Up the Fun', artist: 'Parliament', url: 'assets/Parliament_-_Give_Up_The_Funk__Tear_The_Roof_Off_The_Sucker_(256k).mp3', duration: 0 },
-    { title: 'Get Up (I Feel Like Being a) Sex Machine', artist: 'James Brown', url: 'assets/James_Brown_-_Sexmachine(256k).mp3', duration: 0 }
+    { title: 'Get Up', artist: 'James Brown', url: 'assets/James_Brown_-_Sexmachine(256k).mp3', duration: 0 }
   ];
 
   audio: HTMLAudioElement | null = null;

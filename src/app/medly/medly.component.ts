@@ -9,7 +9,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class MedlyComponent {
   songs = [
     { title: 'Abbey Road Medley', artist: 'The Beatless', url: 'assets/Medley_from_ABBEY_ROAD(128k).m4a', duration: 0 },
-    { title: 'Golden Slumbers / Carry That Weight / The End', artist: 'The Beatles', url: 'assets/Golden_Slumbers___Carry_That_Weight___The_End(256k).mp3', duration: 0 },
+    { title: 'Golden Slumbers ', artist: 'The Beatles', url: 'assets/Golden_Slumbers___Carry_That_Weight___The_End(256k).mp3', duration: 0 },
     { title: 'Live Aid Medley', artist: 'Queen', url: 'assets/Live_Aid__Queen__Full_Concert_[1985,_London,_Wembley_Stadium](128k).m4a', duration: 0 }
   ];
 
