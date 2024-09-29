@@ -17,7 +17,8 @@
   <div class="card">
     <div class="dropdown mb-4 text-center">
       <button class="btn btn-primary btn-lg dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        {{ selectedCategory === 'rock' ? 'Rock' : 'Medly' }} Player
+        {{ selectedCategory === 'rock' ? 'Rock' : selectedCategory === 'medly' ? 'Medly' : selectedCategory === 'pop' ? 'Pop' : selectedCategory === 'hiphop' ? 'Hip Hop' : selectedCategory === 'heavymetal' ? 'Heavy Metal' : selectedCategory === 'reggae' ? 'Reggae' : selectedCategory === 'rapping' ? 'Rapping' : selectedCategory === 'blues' ? 'Blues' : selectedCategory === 'jazz' ? 'Jazz' : selectedCategory === 'funk' ? 'Funk' : 'Select a Category' }} Player
+
       </button>
       <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item text-center" (click)="selectCategory('rock')">Rock</a></li>

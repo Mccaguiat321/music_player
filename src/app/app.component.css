@@ -210,9 +210,8 @@
 
 @media only screen and (max-width: 600px) {
   .caguiat{
-    
     transform: translateY(50px);
-    margin-right: 5px;
+    margin-right: 30px;
 }
 
 
