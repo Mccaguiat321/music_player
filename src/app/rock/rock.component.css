@@ -121,7 +121,9 @@
 @media (max-width: 480px) {
 
   .player-container{
-    width: 280px;
+    width: 255px;
+    padding: 0;
+    transform: translateX(-7px);
   }
 
   .player-header {
